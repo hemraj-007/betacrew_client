@@ -1,0 +1,7 @@
+{
+    "serverHost": "localhost",
+    "serverPort": 3000,
+    "maxRetries": 3,
+    "resendTimeout": 2000
+  }
+  

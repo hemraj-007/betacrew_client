@@ -1,0 +1,10 @@
+2025-05-08T17:19:33.640Z [INFO] Connected to server {}
+2025-05-08T17:19:33.643Z [INFO] Stream complete. Checking for missing sequences... {}
+2025-05-08T17:19:33.643Z [INFO] Missing Sequences {"missingSequences":[6,7,8]}
+2025-05-08T17:19:33.643Z [INFO] Requesting missing packets... {"missingSequences":[6,7,8]}
+2025-05-08T17:19:35.648Z [INFO] Requesting missing packet for sequence 6 {}
+2025-05-08T17:19:35.649Z [INFO] Requesting missing packet for sequence 7 {}
+2025-05-08T17:19:35.649Z [INFO] Requesting missing packet for sequence 8 {}
+2025-05-08T17:19:35.650Z [INFO] Received missing packet for sequence 6 {}
+2025-05-08T17:19:35.650Z [INFO] Received missing packet for sequence 7 {}
+2025-05-08T17:19:35.651Z [INFO] Received missing packet for sequence 8 {}
