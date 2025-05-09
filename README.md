@@ -4,20 +4,38 @@ A Node.js client application that connects to the BetaCrew Mock Exchange Server,
 ✅ Table of Contents
 
 Introduction
+Tech Stack
+Approach
 Features
 Requirements
-Installation
+Setup and Running the Project
 Configuration
-Running the Application
 Output and Logs
 Implementation Details
 Error Handling and Logging
-Future Enhancements
 Contact
 
 
 📦 Introduction
 The BetaCrew Exchange Client is a Node.js application designed to interact with the BetaCrew Mock Exchange Server, simulate real-time stock data streaming, and handle missing data packets by requesting specific sequences.
+
+🚀 Tech Stack
+
+Node.js
+TCP Socket Communication
+Big Endian Data Handling
+Data Parsing and Sequence Management
+Error Handling and Logging
+
+
+⚡ Approach
+
+The client connects to the BetaCrew Exchange Server over a TCP connection.
+Requests all packets using the Stream All Packets request.
+Identifies missing sequences after the initial data stream.
+Requests missing packets using the Resend Packet request.
+Outputs the complete data to data/output.json.
+
 
 🌟 Features
 
@@ -36,17 +54,29 @@ Git
 A terminal/command prompt
 
 
-📂 Installation
+📂 Setup and Running the Project
 
 Clone the Repository:
 
-git clone https://github.com/hemraj-007/betacrew_exchange_client.git
-cd betacrew_exchange_client
+git clone https://github.com/hemraj-007/betacrew_client.git
 
 
 Install Dependencies:
 
 npm install
+
+
+Start the Server:
+
+Navigate to the server directory and run:
+cd /path/to/betacrew_exchange_server
+node main.js
+
+
+Run the Client:
+
+In a separate terminal, run:
+node client.js
 
 
 ⚙️ Configuration
@@ -63,16 +93,6 @@ serverHost: Hostname of the BetaCrew Exchange Server.
 serverPort: Port number for the server connection.
 maxRetries: Maximum number of resend attempts for missing packets.
 resendTimeout: Time in milliseconds between resend attempts (with exponential backoff).
-
-
-🚀 Running the Application
-Start the Server
-Navigate to the betacrew_exchange_server directory and run:
-node main.js
-
-Run the Client
-In a separate terminal, navigate to the client directory and execute:
-node client.js
 
 
 📦 Output and Logs
@@ -117,14 +137,6 @@ Handles server disconnections and unexpected errors gracefully.
 Logs all operations with structured context in logs.txt.
 
 
-🚀 Future Enhancements
-
-Implement data integrity checks to handle conflicting data packets.
-Add configurable logging levels (INFO, WARN, ERROR).
-Implement user notifications for critical errors.
-Enhance packet validation to detect malformed data.
-
-
 📞 Contact
 For any queries or further assistance, please contact:
-Hemraj Bhatia📧 hemrajbhatia38@gmail.com📞 +91 91191 24953🔗 GitHub | LinkedIn
+Hemraj Bhatia📧 hemrajbhatia38@gmail.com📞 +91 91191 24953🔗
