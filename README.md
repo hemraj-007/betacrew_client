@@ -30,6 +30,7 @@ A Node.js client application that connects to the BetaCrew Mock Exchange Server,
 
 ```bash
 git clone https://github.com/hemraj-007/betacrew_client.git
+cd betacrew_exchange_client
 ```
 
 ### 2. Install Dependencies:
@@ -38,14 +39,29 @@ git clone https://github.com/hemraj-007/betacrew_client.git
 npm install
 ```
 
-### 3. Start the Server:
+### **1. Start the Server:**
 
-Navigate to the server directory and run:
+* The server is provided as a zip file named `betacrew_exchange_server.zip` in the assignment description.
+* Extract the zip file to a separate directory.
+* Open a terminal and navigate to the extracted server folder:
 
 ```bash
 cd /path/to/betacrew_exchange_server
+```
+
+Initialize the server project with:
+
+```bash
+npm init -y
+```
+
+Then, run the server using:
+
+```bash
 node main.js
 ```
+
+Ensure the server is running before starting the client.
 
 ### 4. Run the Client:
 
@@ -55,7 +71,6 @@ In a separate terminal, run:
 node client.js
 ```
 
-✅ **Output:**
-The received data is stored in `data/output.json`.
+✅ **Output:** The received data is stored in `data/output.json`.
 
 Detailed logs are stored in `logs.txt`.
