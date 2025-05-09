@@ -29,8 +29,7 @@ A Node.js client application that connects to the BetaCrew Mock Exchange Server,
 ### 1. Clone the Repository:
 
 ```bash
-git clone [Insert GitHub Link Here]
-cd betacrew_exchange_client
+git clone https://github.com/hemraj-007/betacrew_client.git
 ```
 
 ### 2. Install Dependencies:
